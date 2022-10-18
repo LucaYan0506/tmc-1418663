@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 class Program
 {
     public static void Main(string[] args)
@@ -58,7 +59,8 @@ class Program
 
         }
     */
-        RangeTest();
+      //RangeTest();
+      RoundNumber();
     }
 
     public static void RangeTest()
@@ -67,4 +69,19 @@ class Program
         foreach (int num in squares)
             Console.WriteLine(num);
     }
+
+  public static void RoundNumber(){
+    float originalNumber1 = 1.23f;
+    float originalNumber2 = 134.53f;
+    float originalNumber3 = 1.50f;
+
+    float roundedNumber1 = (float)Math.Round(originalNumber1,1);
+    float roundedNumber2 = (float)Math.Round(originalNumber2,1);
+    float roundedNumber3 = (float)Math.Round(originalNumber3,0);
+
+    Console.WriteLine("roundNumber1 is " + roundedNumber1);
+    Console.WriteLine("roundNumber2 is " + roundedNumber2);
+    Console.WriteLine("roundNumber3 is " + roundedNumber3);
+    
+  }
 }
