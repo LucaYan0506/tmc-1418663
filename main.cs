@@ -59,8 +59,9 @@ class Program
 
         }
     */
-      //RangeTest();
-      RoundNumber();
+        //RangeTest();
+        //RoundNumber();
+        TruncateTest();
     }
 
     public static void RangeTest()
@@ -70,18 +71,38 @@ class Program
             Console.WriteLine(num);
     }
 
-  public static void RoundNumber(){
-    float originalNumber1 = 1.23f;
-    float originalNumber2 = 134.53f;
-    float originalNumber3 = 1.50f;
+    public static void RoundNumber()
+    {
+        float originalNumber1 = 1.23f;
+        float originalNumber2 = 134.53f;
+        float originalNumber3 = 1.50f;
 
-    float roundedNumber1 = (float)Math.Round(originalNumber1,1);
-    float roundedNumber2 = (float)Math.Round(originalNumber2,1);
-    float roundedNumber3 = (float)Math.Round(originalNumber3,0);
+        float roundedNumber1 = (float)Math.Ceiling(originalNumber1);
+        float roundedNumber2 = (float)Math.Round(originalNumber2, 1);
+        float roundedNumber3 = (float)Math.Floor(originalNumber3);
 
-    Console.WriteLine("roundNumber1 is " + roundedNumber1);
-    Console.WriteLine("roundNumber2 is " + roundedNumber2);
-    Console.WriteLine("roundNumber3 is " + roundedNumber3);
-    
-  }
+        Console.WriteLine("roundNumber1 is " + roundedNumber1);
+        Console.WriteLine("roundNumber2 is " + roundedNumber2);
+        Console.WriteLine("roundNumber3 is " + roundedNumber3);
+
+    }
+
+    public static void TruncateTest()
+    {
+        decimal decimalNumber = 32.8943m;
+
+        Console.WriteLine(Math.Truncate(decimalNumber));
+
+        decimalNumber = -32.8943m;
+
+        Console.WriteLine(Math.Truncate(decimalNumber));
+
+        float floatNumber = 32.8943f;
+
+        Console.WriteLine(Math.Truncate(floatNumber));
+
+        floatNumber = -32.8943f;
+
+        Console.WriteLine(Math.Truncate(floatNumber));
+    }
 }
